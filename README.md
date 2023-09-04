@@ -75,23 +75,23 @@ As Code Girl Summer 2023 free web development camp for girls of age 15 to 18, or
 
 Correlation between the features of applicants.
 
-![heatmap](assets/heatmap.png)
+![heatmap](assets/applicants-heat-map.png)
 
 Correlation between the features of participants.
 
-![heatmap](assets/heatmap.png)
+![heatmap](assets/participants-heat-map.png)
 
 Correlation between the features of influencers.
 
-![heatmap](assets/heatmap.png)
+![heatmap](assets/influencers-heat-map.png)
 
 Acceptance rate per Educational Institution.
 
-![heatmap](assets/heatmap.png)
+![heatmap](assets/acceptance-rates.png)
 
 Application amounts by day with Instagram Influencers' repost days highlighted.
 
-![heatmap](assets/heatmap.png)
+![heatmap](assets/applications-timeline.png)
 
 
  **Lessons learned and recommendation**
