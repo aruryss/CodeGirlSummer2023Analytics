@@ -15,13 +15,13 @@
 
 ## Table of Contents
 
-  - [Questions & Hypothesis](#questions-&-hypothesis)
-  - [Approach & Analysis](#approach-&-analysis)
+  - [Questions and Hypothesis](#questions-and-hypothesis)
+  - [Approach and Analysis](#approach-and-analysis)
   - [Technical challenges](#technical-challenges)
   - [Tech Stack](#tech-stack)
   - [Quick glance at the results](#quick-glance-at-the-results)
-  - [Assumptions & Limitations](#assumptions-&-limitations)
-  - [Data Analysis](#Q1:-Educational-background-&-Acceptance-rate)
+  - [Assumptions and Limitations](#assumptions-and-limitations)
+  - [Data Analysis](#Q1:-Educational-background-and-Acceptance-rate)
   - [Deeper analysis](#Deeper-analysis)
   - [Final results](#Final-results)
   - [Future Improvements](#Future-Improvements)
@@ -106,7 +106,7 @@ Thus, **limitations** of the analysis are the following:
 3. Engagement in Instagram is calculated with many factors in mind, but it is private to each user, thus I took available to me interactions with influencers’ permanent content to be engagement.
 4. Due to Instagram limitations, there is no publicly and privately available information on follower count at certain date, thus I regarded follower count on [DATE TAKEN] for analysis.
 
-## Q1: Educational background & Acceptance rate
+## Q1: Educational background and Acceptance rate
 Firstly, let's take a look at the acceptance rate per educational institution.
 
 ![heatmap](assets/acceptance-rates.png)
