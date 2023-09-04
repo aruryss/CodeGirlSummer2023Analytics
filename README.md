@@ -67,7 +67,7 @@ As Code Girl Summer 2023 free web development camp for girls of age 15 to 18, or
 ## Tech Stack
 
 - Python3
-- Libraries: Pandas, Seaborn, MatPlotLib, NumPy, and DateTime
+  - Libraries: Pandas, Seaborn, MatPlotLib, NumPy, and DateTime
 
 
 ## Quick glance at the results
@@ -174,38 +174,21 @@ As can be seen in the graph above, those who chose Frontend track had a 6.5% hig
 ```
 
 ├── assets
-│   ├── confusion_matrix.png                      <- confusion matrix image used in the README.
-│   ├── gif_streamlit.gif                         <- gif file used in the README.
-│   ├── heatmap.png                               <- heatmap image used in the README.
-│   ├── Credit_card_approval_banner.png           <- banner image used in the README.
-│   ├── environment.yml                           <- list of all the dependencies with their versions(for conda environment).
-│   ├── roc.png                                   <- ROC image used in the README.
+│   ├── cgs.png                                   <- banner used in the README.
+│   ├── acceptance-rates.png                      <- acceptance rate per educational institution plot used in the README.
+│   ├── applications-timeline.png                 <- applications per day coming from Instagram plot used in the README.
+│   ├── influencer-heat-map.png                   <- influencer metrics correlation heat map used in the README.
+│   ├── track-rates.png                           <- acceptance rate per learning track plot used in the README.
+│   ├── applicants-heat-map.png                   <- applicant attributes correlation heat map used in the README.
+│   ├── participants-heat-map.png                 <- participant attributes correlation heat map used in the README.
 │
 ├── datasets
-│   ├── application_record.csv                    <- the dataset with profile information (without the target variable).
-│   ├── credit_records.csv                        <- the dataset with account credit records (used to derive the target variable).
-│   ├── test.csv                                  <- the test data (with target variable).
-│   ├── train.csv                                 <- the train data (with target variable).
-│
-│
-├── pandas_profile_file
-│   ├── credit_pred_profile.html                  <- exported panda profile html file.
-│
-│
-├── .gitignore                                    <- used to ignore certain folder and files that won't be commit to git.
-│
-│
-├── Credit_card_approval_prediction.ipynb         <- main python notebook where all the analysis and modeling are done.
-│
-│
-├── cc_approval_pred.py                           <- file with the model and streamlit component for rendering the interface.
+│   ├── influencer.csv                    <- the dataset with Instagram Influencer profile information.
+│   ├── participants.csv                  <- the dataset with participant information.
+│   ├── registered.csv                    <- the dataset with applicant information.
 │
 │
 ├── README.md                                     <- this readme file.
-│
-│
-├── requirements.txt                              <- list of all the dependencies with their versions(used for Streamlit).
-
 ```
 
 ## Blog post
