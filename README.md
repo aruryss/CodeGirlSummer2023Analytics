@@ -21,7 +21,7 @@
   - [Tech Stack](#tech-stack)
   - [Quick glance at the results](#quick-glance-at-the-results)
   - [Assumptions and Limitations](#assumptions--limitations)
-  - [Data Analysis](#Q1:-Educational-background-and-Acceptance-rate)
+  - [Data Analysis](#q1-Educational-background-and-Acceptance-rate)
   - [Deeper analysis](#Deeper-analysis)
   - [Final results](#Final-results)
   - [Future Improvements](#Future-Improvements)
