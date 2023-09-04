@@ -15,12 +15,12 @@
 
 ## Table of Contents
 
-  - [Questions and Hypothesis](#questions-and-hypothesis)
-  - [Approach and Analysis](#approach-and-analysis)
+  - [Questions and Hypothesis](#questions--hypothesis)
+  - [Approach and Analysis](#approach--analysis)
   - [Technical challenges](#technical-challenges)
   - [Tech Stack](#tech-stack)
   - [Quick glance at the results](#quick-glance-at-the-results)
-  - [Assumptions and Limitations](#assumptions-and-limitations)
+  - [Assumptions and Limitations](#assumptions--limitations)
   - [Data Analysis](#Q1:-Educational-background-and-Acceptance-rate)
   - [Deeper analysis](#Deeper-analysis)
   - [Final results](#Final-results)
