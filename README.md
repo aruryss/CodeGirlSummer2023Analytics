@@ -28,14 +28,13 @@
   - [Deeper analysis](#Deeper-analysis)
   - [Final results](#Final-results)
   - [Future Improvements](#Future-Improvements)
-  - [Full Report](#Full-Report)
 ##
 As Code Girl Summer 2023 free web development camp for girls of age 15 to 18, organized by NU ACM-Women Student Chapter came to an end, I conducted the analysis of our **promo campaign** and **educational biases** we might have during the admissions process to improve accessibility and popularity of our events.
 
 
 ## Questions & Hypothesis
 
-**Q1:** Does educational background affect acceptance chance?
+**Q1:** Does educational background affect acceptance rate?
 
 **H1:** _Yes, I believe that students of some institutions make up larger parts of the participants._
 ##
@@ -94,97 +93,81 @@ Application amounts by day with Instagram Influencers' repost days highlighted.
 ![heatmap](assets/applications-timeline.png)
 
 
- **Lessons learned and recommendation**
+## Assumptions & Limitations
 
-Several assumptions that I made for the analysis were:
+Several **assumptions** that I made for the analysis were:
 
 1. Applications were driven by Instagram influencers **solely** within **5-day-window** of them posting about camp
 2. Educational institution indicated by applicants is their primary source of learning
 3. Engagement is defined as the number of likes under the **last 6 Instagram posts** prior to the date of camp advertisement divided by the number of followers
 4. Number of following of and Instagram account was regarded as of **September 3rd 2023**
 
-Thus, limitations of the analysis are the following:
+Thus, **limitations** of the analysis are the following:
 
-1. All those who indicated their source to be Instagram, were counted towards the amount of influencers’ traffic, if within the 5-day-window, as I could not tell for sure whether they learned about camp through their Explore page, native post or video.
+1. All those who indicated their source of traffic to be Instagram, were counted towards the amount of influencers’ traffic, if within the 1-day-window (lifespan of Instagram Stories used to advertise camp), as I could not tell for sure whether they learned about camp through their Explore page, native post or video.
 2. Girls could be studying in other institutions for way longer before the one they indicated, but I cannot track all educational history, thus I refer to the one they indicated as primary one.
 3. Engagement in Instagram is calculated with many factors in mind, but it is private to each user, thus I took available to me interactions with influencers’ permanent content to be engagement.
 4. Due to Instagram limitations, there is no publicly and privately available information on follower count at certain date, thus I regarded follower count on [DATE TAKEN] for analysis.
 
-## Assumptions & Limitations
+## Q1: Educational background & Acceptance rate
+Firstly, let's take a look at the acceptance rate per educational institution.
 
-- Combine this model with with a regression model to predict how much of a credit limit an applicant will be approved for.
-- Hyperparameter tuning with grid search or random search.
-- Better interpretation of the chi-square test
-- Retrain the model without the least predictive features
+![heatmap](assets/acceptance-rates.png)
 
+As we can see Binom, NIS, and NU have the highest acceptance rates amongst all. As admissions was heavily dependent on the motivational letter, there is a possibility of those educational institutions providing more high-quality writing classes and access to such trainings that affect the quality of the letter. Thus, educational background did affect chance of acceptance into the camp.
 
+Conclusion: To increase the acceptance rate of schoolgirls in ordinary schools, we will include a list of questions they should answer in their motivational letter rather than relying on their understanding of the format.
 
-## Run Locally
-Initialize git
+## Q2: Which Instagram influencer drove the most traffic?
+From the applications timeline, it is evident that most applications were submitted after influencer 'same.ke' reposted our camp announcement and promo-video.
 
-```bash
-git init
-```
+![heatmap](assets/applications-timeline.png)
 
+He put a lot of effort into his repost as he recorded a video and included a link to registration for the camp. The analysis made it evident that his effort correlated with the traffic he brought.
 
-Clone the project
+Conclusion: Collaborate with influencers who make a talking video and include all the links to the event in future initiatives.
 
-```bash
-git clone https://github.com/semasuka/Credit-card-approval-prediction-classification.git
-```
+## Q3 & Q4: Does the following & engagement of an Instagram influencer impact the amount of applications?
 
-enter the project directory
+![heatmap](assets/influencers-heat-map.png)
 
-```bash
-cd Credit-card-approval-prediction-classification
-```
+There is a correlation between follower count and engagement, both of which are the highest for 'same.ke', the influencer who drove the most amount of applications as discussed previously.
 
-Create a conda virtual environment and install all the packages from the environment.yml (recommended)
+Conclusion: Collaborate with influencers with high engagement and follower count whose primary demographic are young women interested in IT.
 
-```bash
-conda env create --prefix <env_name> --file assets/environment.yml
-```
+## Deeper analysis
 
-Activate the conda environment
+As applicants had an opportunity to choose their track of learning (Frontend & Backend), I wondered whether their preference affected their acceptance rate.
 
-```bash
-conda activate <env_name>
-```
+![heatmap](assets/track-rates.png)
 
-List all the packages installed
+As can be seen in the graph above, those who chose Frontend track had a 6.5% higher acceptance rate than those who chose Backend track, despite those tracks having the same capacity. This could be affected by multiple factors, such as: educational background of applicants, and quality of their motivational letter.
 
-```bash
-conda list
-```
+## Final results
+***Q1:** Does educational background affect acceptance rate?
 
-Start the streamlit server locally
+**Answer:** _In a sense, the highest acceptance rates were among the educational institutions for gifted children in Kazakhstan, but there was a factor of chosen track that also affected the acceptance rate._
+##
 
-```bash
-streamlit run cc_approval_pred.py
-```
-If you are having issue with streamlit, please follow [this tutorial on how to set up streamlit](https://docs.streamlit.io/library/get-started/installation)
+**Q2:** Which Instagram influencer drove the most traffic?
 
-## Explore the notebook
+**H2:** _Instagram Influencer 'same.ke' drove the highest traffic._
+##
 
-To explore the notebook file [here](https://nbviewer.org/github/semasuka/Credit-card-approval-prediction-classification/blob/main/Credit_card_approval_prediction.ipynb)
+**Q3:** Does the following of an Instagram influencer impact number of applications?
 
-## Deployment on streamlit
+**H3:** _Yes, the number of followers is directly proportional to the traffic driven._
+##
 
-To deploy this project on streamlit share, follow these steps:
+**Q4:** Does the engagement of an Instagram influencer impact number of applications?
 
-- first, make sure you upload your files on Github, including a requirements.txt file
-- go to [streamlit share](https://share.streamlit.io/)
-- login with Github, Google, etc.
-- click on new app button
-- select the Github repo name, branch, python file with the streamlit codes
-- click advanced settings, select python version 3.9 and add the secret keys if your model is stored on AWS or GCP bucket
-- then save and deploy!
+**H4:** _Yes, the audience engagement with the content is directly proportional to the traffic driven._
 
-## App deployed on Streamlit
+## Future Improvements
+- Track the audience engagement of our own Instagram account, as it is the main platform of our promo-campaign and should be reffered as primary source of traffic
+- Implement Natural Language Processing model for Russian Language to process quality of the motivational letters to better assess biases during admissions and factors affecting acceptance rates
+- All the conclusions derived from the analysis above will be implemented into our upcoming events to increase the quality and accessibility of tech events for girls in Kazahstan.
 
-![Streamlit GIF](assets/gif_streamlit.gif)
-
-Video to gif [tool](https://ezgif.com/)
 ## Repository structure
 
 
@@ -215,9 +198,6 @@ Video to gif [tool](https://ezgif.com/)
 ├── Credit_card_approval_prediction.ipynb         <- main python notebook where all the analysis and modeling are done.
 │
 │
-├── LICENSE                                       <- license file.
-│
-│
 ├── cc_approval_pred.py                           <- file with the model and streamlit component for rendering the interface.
 │
 │
@@ -227,43 +207,7 @@ Video to gif [tool](https://ezgif.com/)
 ├── requirements.txt                              <- list of all the dependencies with their versions(used for Streamlit).
 
 ```
-## Contribution
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change or contribute.
 
 ## Blog post
 
 The accompanying blog post for this project can be found [here](https://semasuka.github.io/blog/2022/10/12/credit-card-approval-prediction.html)
-
-## Project featuring
-
-This project was featured on [Luke Barousse Youtube Channel](https://www.youtube.com/c/LukeBarousse), Click on the thumbnail to watch the video
-
-[![IMAGE_ALT](https://img.youtube.com/vi/5Q0gB7imNOo/0.jpg)](https://www.youtube.com/watch?v=5Q0gB7imNOo&t=222s)
-
-
-## License
-
-MIT License
-
-Copyright (c) 2022 Stern Semasuka
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-Learn more about [MIT](https://choosealicense.com/licenses/mit/) license
