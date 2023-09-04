@@ -4,7 +4,6 @@
 ![Python version](https://img.shields.io/badge/Python%20version-3.10%2B-lightgrey)
 ![GitHub last commit](https://img.shields.io/github/last-commit/aruryss/CodeGirlSummer2023Analytics)
 ![GitHub repo size](https://img.shields.io/github/repo-size/aruryss/CodeGirlSummer2023Analytics)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 # Coding Camp Promo-campaign and Admission Analytics
 
