@@ -15,16 +15,13 @@
 
 ## Table of Contents
 
-  - [Questions & Hypothesis](#Questions-Hypothesis)
-  - [Approach & Analysis](#Approach-Analysis)
-  - [Technical challenges](#Technical-challenges)
+  - [Questions & Hypothesis](#questions-&-hypothesis)
+  - [Approach & Analysis](#approach-&-analysis)
+  - [Technical challenges](#technical-challenges)
   - [Tech Stack](#tech-stack)
   - [Quick glance at the results](#quick-glance-at-the-results)
-  - [Assumptions & Limitations](#Assumptions-Limitations)
-  - [Q1: Educational background & Acceptance rate](#Q1)
-  - [Q2: Instagram influencer traffic](#Q2)
-  - [Q3: Instagram influencer traffic & follower amount](#Q3)
-  - [Q4: Instagram influencer traffic & engagement](#Q4)
+  - [Assumptions & Limitations](#assumptions-&-limitations)
+  - [Data Analysis](#Q1:-Educational-background-&-Acceptance-rate)
   - [Deeper analysis](#Deeper-analysis)
   - [Final results](#Final-results)
   - [Future Improvements](#Future-Improvements)
@@ -190,7 +187,3 @@ As can be seen in the graph above, those who chose Frontend track had a 6.5% hig
 │
 ├── README.md                                     <- this readme file.
 ```
-
-## Blog post
-
-The accompanying blog post for this project can be found [here](https://semasuka.github.io/blog/2022/10/12/credit-card-approval-prediction.html)
