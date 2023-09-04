@@ -29,75 +29,88 @@
   - [Final results](#Final-results)
   - [Future Improvements](#Future-Improvements)
   - [Full Report](#Full-Report)
+##
+As Code Girl Summer 2023 free web development camp for girls of age 15 to 18, organized by NU ACM-Women Student Chapter came to an end, I conducted the analysis of our **promo campaign** and **educational biases** we might have during the admissions process to improve accessibility and popularity of our events.
 
 
+## Questions & Hypothesis
 
+**Q1:** Does educational background affect acceptance chance?
 
-## Business problem
+**H1:** _Yes, I believe that students of some institutions make up larger parts of the participants._
+##
 
-This app predicts if an applicant will be approved for a credit card or not. Each time there is a hard enquiry your credit score is affected negatively. This app predict the probability of being approved without affecting your credit score. This app can be used by applicant who wants to find out if they will be approved for a credit card without affecting their credit score.
-## Data source
+**Q2:** Which Instagram influencer drove the most traffic?
 
-- [Kaggle credit card approval prediction](https://www.kaggle.com/rikdifos/credit-card-approval-prediction)
+**H2:** _As some people mentioned Instagram influencer “same.ke” in their motivational letters, I believe it is “same.ke”._
+##
 
-## Methods
+**Q3:** Does the following of an Instagram influencer impact number of applications?
 
-- Exploratory data analysis
-- Bivariate analysis
-- Multivariate correlation
-- S3 bucket model hosting
-- Model deployment
+**H3:** _Yes, I think number of followers is directly proportional to the reached audience and potential applicants._
+##
+
+**Q4:** Does the engagement of an Instagram influencer impact number of applications?
+
+**H4:** _Yes, I think engagement of the audience is directly proportional to the number of applicants_
+## Approach & Analysis
+
+1. Data was collected from applicants and participants of the camp via Google Forms.
+2. Cleaned and formatted into 2 datasets of applicants and participants.
+3. Columns of Education, Track-chosen, Track-final, Traffic and Timestamp were presumed to be necessary to answer the questions.
+4. Instagram influencer data set with necessary data was collected and formatted by hand.
+5. Graphical visualisation and statistic inference were incorporated.
+
+## Technical challenges
+
+- Datasets of applicants and participants were cleaned by removing duplicate values for education (Ex.:Nazarbayev University and Nazarbayev university) and removing column with motivational letters in Google Sheets
+- Datasets of applicants and participants had missing value in the column Traffic, thus they were filled using Python3 Pandas library
 ## Tech Stack
 
-- Python (refer to requirement.txt for the packages used in this project)
-- Streamlit (interface for the model)
-- AWS S3 (model storage)
+- Python3
+- Libraries: Pandas, Seaborn, MatPlotLib, NumPy, and DateTime
 
 
 ## Quick glance at the results
 
-Correlation between the features.
+Correlation between the features of applicants.
 
 ![heatmap](assets/heatmap.png)
 
-Confusion matrix of gradient boosting classifier.
+Correlation between the features of participants.
 
-![Confusion matrix](assets/confusion_matrix.png)
+![heatmap](assets/heatmap.png)
 
-ROC curve of gradient boosting classifier.
+Correlation between the features of influencers.
 
-![ROC curve](assets/roc.png)
+![heatmap](assets/heatmap.png)
 
-Top 3 models (with default parameters)
+Acceptance rate per Educational Institution.
 
-| Model     	                | Recall score 	|
-|-------------------	        |------------------	|
-| Support vector machine     	| 88% 	            |
-| Gradient boosting    	        | 90% 	            |
-| Adaboost               	    | 79% 	            |
+![heatmap](assets/heatmap.png)
 
+Application amounts by day with Instagram Influencers' repost days highlighted.
 
-
-- **The final model used for this project: Gradient boosting**
-- **Metrics used: Recall**
-- **Why choose recall as metrics**:
-  Since the objective of this problem is to minimize the risk of a credit default, the metrics to use depends on the current economic situation:
-
-  - During a bull market (when the economy is expanding), people feel wealthy and are employed. Money is usually cheap, and the risk of default is low because of economic stability and low unemployment. The financial institution can handle the risk of default; therefore, it is not very strict about giving credit. The financial institution can handle some bad clients as long as most credit card owners are good clients (aka those who pay back their credit in time and in total).In this case, having a good recall (sensitivity) is ideal.
-
-  - During a bear market (when the economy is contracting), people lose their jobs and money through the stock market and other investment venues. Many people struggle to meet their financial obligations. The financial institution, therefore, tends to be more conservative in giving out credit or loans. The financial institution can't afford to give out credit to many clients who won't be able to pay back their credit. The financial institution would rather have a smaller number of good clients, even if it means that some good clients are denied credit. In this case, having a good precision (specificity) is desirable.
-
-    ***Note***: There is always a trade-off between precision and recall. Choosing the right metrics depends on the problem you are solving.
-
-    ***Conclusion***: Since the time I worked on this project (beginning 2022), we were in the longest bull market (excluding March 2020 flash crash) ever recorded; we will use recall as our metric.
+![heatmap](assets/heatmap.png)
 
 
  **Lessons learned and recommendation**
 
-- Based on this project's analysis, income, family member headcount, and employment length are the three most predictive features in determining whether an applicant will be approved for a credit card. Other features like age and working employment status are also helpful. The least useful features are the type of dwelling and car ownership.
-- The recommendation would be to focus more on the most predictive features when looking at the applicant profile and pay less attention to the least predictive features.
+Several assumptions that I made for the analysis were:
 
-## Limitation and what can be improved
+1. Applications were driven by Instagram influencers **solely** within **5-day-window** of them posting about camp
+2. Educational institution indicated by applicants is their primary source of learning
+3. Engagement is defined as the number of likes under the **last 6 Instagram posts** prior to the date of camp advertisement divided by the number of followers
+4. Number of following of and Instagram account was regarded as of **September 3rd 2023**
+
+Thus, limitations of the analysis are the following:
+
+1. All those who indicated their source to be Instagram, were counted towards the amount of influencers’ traffic, if within the 5-day-window, as I could not tell for sure whether they learned about camp through their Explore page, native post or video.
+2. Girls could be studying in other institutions for way longer before the one they indicated, but I cannot track all educational history, thus I refer to the one they indicated as primary one.
+3. Engagement in Instagram is calculated with many factors in mind, but it is private to each user, thus I took available to me interactions with influencers’ permanent content to be engagement.
+4. Due to Instagram limitations, there is no publicly and privately available information on follower count at certain date, thus I regarded follower count on [DATE TAKEN] for analysis.
+
+## Assumptions & Limitations
 
 - Combine this model with with a regression model to predict how much of a credit limit an applicant will be approved for.
 - Hyperparameter tuning with grid search or random search.
