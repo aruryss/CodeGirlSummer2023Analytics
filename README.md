@@ -11,7 +11,7 @@
 
 ## Authors
 
-- [@semasuka](https://www.github.com/aruryss)
+- [@aruryss](https://www.github.com/aruryss)
 
 ## Table of Contents
 
