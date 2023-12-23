@@ -103,7 +103,7 @@ Thus, **limitations** of the analysis are the following:
 1. All those who indicated their source of traffic to be Instagram, were counted towards the amount of influencers’ traffic, if within the 1-day-window (lifespan of Instagram Stories used to advertise camp), as I could not tell for sure whether they learned about camp through their Explore page, native post or video.
 2. Girls could be studying in other institutions for way longer before the one they indicated, but I cannot track all educational history, thus I refer to the one they indicated as primary one.
 3. Engagement in Instagram is calculated with many factors in mind, but it is private to each user, thus I took available to me interactions with influencers’ permanent content to be engagement.
-4. Due to Instagram limitations, there is no publicly and privately available information on follower count at certain date, thus I regarded follower count on [DATE TAKEN] for analysis.
+4. Due to Instagram limitations, there is no publicly and privately available information on follower count at certain date, thus I regarded follower count on 04.09.2023 (September 9th 2023) for analysis.
 
 ## Q1: Educational background and Acceptance rate
 Firstly, let's take a look at the acceptance rate per educational institution.
